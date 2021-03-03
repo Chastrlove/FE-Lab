@@ -1,0 +1,7 @@
+{
+  "name": "reactive",
+  "version": "1.0.0",
+  "dependencies": {
+    "@vue/reactivity": "^3.0.7"
+  }
+}
