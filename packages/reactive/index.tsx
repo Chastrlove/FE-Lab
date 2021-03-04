@@ -1,10 +1,9 @@
-import { effect, reactive } from "@vue/reactivity";
+import { reactive, effect } from "@vue/reactivity";
 
-const react = reactive({ a: 1 });
+const proxy = reactive({ a: 1 });
 
-effect(()=>{
-    console.log(react.a)
-})
+effect(() => {
+  console.log(proxy.a);
+});
 
-react.a=123
-
+proxy.a = 123;
