@@ -55,10 +55,10 @@ function useState(initialState) {
             next: null
         }
         /**
-         * workInProgressHook始终指向最后一个插入的update，同时  queue.pending.next指向第一个update
+         * workInProgressHook始终指向最后一个插入的hook，同时  queue.pending.next指向第一个update
          *                       workInProgressHook
          *                               ||
-         * fiber.memoizedState = u0 ---> u1
+         * fiber.memoizedState = hook0 ---> hook1
          */
         if (!fiber.memoizedState) {
             fiber.memoizedState = hook;
