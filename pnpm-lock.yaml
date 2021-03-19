@@ -2,8 +2,10 @@ importers:
   .:
     dependencies:
       '@vue/reactivity': 3.0.7
+      global: 4.4.0
       lodash: 4.17.21
       node-fetch: 2.6.1
+      pnpm: 5.18.7
       prettier: 2.2.1
       react: 17.0.1
       react-dom: 17.0.1_react@17.0.1
@@ -19,14 +21,26 @@ importers:
       '@types/react': ^17.0.2
       '@types/react-dom': ^17.0.1
       '@vue/reactivity': ^3.0.7
+      global: ^4.4.0
       lodash: ^4.17.21
       node-fetch: ^2.6.0
+      pnpm: ^5.18.7
       prettier: ^2.0.5
       react: ^17.0.1
       react-dom: ^17.0.1
       ts-node: ^9.1.1
       typescript: ^4.2.2
       webpack: ^5.24.2
+  packages/csrf:
+    dependencies:
+      body-parser: 1.19.0
+      express: 4.17.1
+    devDependencies:
+      '@types/express': 4.17.11
+    specifiers:
+      '@types/express': ^4.17.11
+      body-parser: ^1.19.0
+      express: ^4.17.1
   packages/minipack:
     devDependencies:
       '@babel/core': 7.13.8
@@ -1441,6 +1455,21 @@ packages:
     resolution:
       integrity: sha1-uaHvpjUgG6m8hQMjqHk+4tNsBKA=
       tarball: '@types/babel__traverse/download/@types/babel__traverse-7.11.0.tgz'
+  /@types/body-parser/1.19.0:
+    dependencies:
+      '@types/connect': 3.4.34
+      '@types/node': 14.14.31
+    dev: true
+    resolution:
+      integrity: sha1-BoWzxH6zAG/+0RfN1VFkth+AU48=
+      tarball: '@types/body-parser/download/@types/body-parser-1.19.0.tgz'
+  /@types/connect/3.4.34:
+    dependencies:
+      '@types/node': 14.14.31
+    dev: true
+    resolution:
+      integrity: sha1-FwpAIjptZmAG2TyhKK8r6x2bGQE=
+      tarball: '@types/connect/download/@types/connect-3.4.34.tgz'
   /@types/eslint-scope/3.7.0:
     dependencies:
       '@types/eslint': 7.2.6
@@ -1464,6 +1493,25 @@ packages:
     resolution:
       integrity: sha1-D7a/u+q9ejCIBQSZM2nEvx3qsf4=
       tarball: '@types/estree/download/@types/estree-0.0.46.tgz'
+  /@types/express-serve-static-core/4.17.19:
+    dependencies:
+      '@types/node': 14.14.31
+      '@types/qs': 6.9.6
+      '@types/range-parser': 1.2.3
+    dev: true
+    resolution:
+      integrity: sha1-AKz8FjLnKaysTxUw6eFvbdFQih0=
+      tarball: '@types/express-serve-static-core/download/@types/express-serve-static-core-4.17.19.tgz'
+  /@types/express/4.17.11:
+    dependencies:
+      '@types/body-parser': 1.19.0
+      '@types/express-serve-static-core': 4.17.19
+      '@types/qs': 6.9.6
+      '@types/serve-static': 1.13.9
+    dev: true
+    resolution:
+      integrity: sha1-3r48qm+OX82pa0e9VOL0DE7llUU=
+      tarball: '@types/express/download/@types/express-4.17.11.tgz'
   /@types/glob/7.1.3:
     dependencies:
       '@types/minimatch': 3.0.3
@@ -1512,6 +1560,11 @@ packages:
     resolution:
       integrity: sha1-/iRjLnm3rePxMoka//hsql5c4Ag=
       tarball: '@types/lodash/download/@types/lodash-4.14.168.tgz'
+  /@types/mime/1.3.2:
+    dev: true
+    resolution:
+      integrity: sha1-k+Jb+e51/g/YC1lLxP6w6GIRG1o=
+      tarball: '@types/mime/download/@types/mime-1.3.2.tgz'
   /@types/minimatch/3.0.3:
     dev: false
     resolution:
@@ -1535,6 +1588,16 @@ packages:
     resolution:
       integrity: sha1-KrDV2i5YFflLC51LldHl8kOrLKc=
       tarball: '@types/prop-types/download/@types/prop-types-15.7.3.tgz'
+  /@types/qs/6.9.6:
+    dev: true
+    resolution:
+      integrity: sha1-35w8izGiR+wxXmmWVmvjFx30s7E=
+      tarball: '@types/qs/download/@types/qs-6.9.6.tgz'
+  /@types/range-parser/1.2.3:
+    dev: true
+    resolution:
+      integrity: sha1-fuMwunyq+5gJC+zoal7kQRWQTCw=
+      tarball: '@types/range-parser/download/@types/range-parser-1.2.3.tgz'
   /@types/react-dom/17.0.1:
     dependencies:
       '@types/react': 17.0.2
@@ -1558,6 +1621,14 @@ packages:
     resolution:
       integrity: sha1-PeJMTv75At2XlaScdfdgy+T3pag=
       tarball: '@types/react/download/@types/react-17.0.2.tgz'
+  /@types/serve-static/1.13.9:
+    dependencies:
+      '@types/mime': 1.3.2
+      '@types/node': 14.14.31
+    dev: true
+    resolution:
+      integrity: sha1-qs8oqFoF7imhH7fD6tk1rFbzPk4=
+      tarball: '@types/serve-static/download/@types/serve-static-1.13.9.tgz'
   /@types/source-list-map/0.1.2:
     dev: false
     resolution:
@@ -3428,6 +3499,11 @@ packages:
     resolution:
       integrity: sha1-GvuB9TNxcXXUeGVd68XjMtn5u1E=
       tarball: dom-serializer/download/dom-serializer-0.2.2.tgz
+  /dom-walk/0.1.2:
+    dev: false
+    resolution:
+      integrity: sha1-DFSL7wSPTR8qlySQAiNgYNqj/YQ=
+      tarball: dom-walk/download/dom-walk-0.1.2.tgz
   /domain-browser/1.2.0:
     engines:
       node: '>=0.4'
@@ -4339,6 +4415,14 @@ packages:
     resolution:
       integrity: sha1-/IX3MGTfafUEIfR/iD/luRO6m5c=
       tarball: global-prefix/download/global-prefix-3.0.0.tgz
+  /global/4.4.0:
+    dependencies:
+      min-document: 2.19.0
+      process: 0.11.10
+    dev: false
+    resolution:
+      integrity: sha1-PnsQUXkAajI+1xqvyj6cV6XMZAY=
+      tarball: global/download/global-4.4.0.tgz
   /globals/11.12.0:
     engines:
       node: '>=4'
@@ -6153,6 +6237,13 @@ packages:
     resolution:
       integrity: sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=
       tarball: mimic-fn/download/mimic-fn-2.1.0.tgz
+  /min-document/2.19.0:
+    dependencies:
+      dom-walk: 0.1.2
+    dev: false
+    resolution:
+      integrity: sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
+      tarball: min-document/download/min-document-2.19.0.tgz
   /minimalistic-assert/1.0.1:
     resolution:
       integrity: sha1-LhlN4ERibUoQ5/f7wAznPoPk1cc=
@@ -6870,6 +6961,14 @@ packages:
     resolution:
       integrity: sha1-8JkTPfft5CLoHR2ESCcO6z5CYfM=
       tarball: pkg-dir/download/pkg-dir-4.2.0.tgz
+  /pnpm/5.18.7:
+    dev: false
+    engines:
+      node: '>=10.16'
+    hasBin: true
+    resolution:
+      integrity: sha1-kxkkq4D528dPyUK9N1zeLrOShpQ=
+      tarball: pnpm/download/pnpm-5.18.7.tgz
   /portfinder/1.0.28:
     dependencies:
       async: 2.6.3

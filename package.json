@@ -4,19 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "react": "^17.0.1",
     "@vue/reactivity": "^3.0.7",
-    "react-dom": "^17.0.1",
+    "global": "^4.4.0",
+    "lodash": "^4.17.21",
     "node-fetch": "^2.6.0",
+    "pnpm": "^5.18.7",
     "prettier": "^2.0.5",
-    "lodash": "^4.17.21"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "ts-node": "^9.1.1",
-    "webpack": "^5.24.2",
-    "typescript": "^4.2.2",
-    "@types/react": "^17.0.2",
     "@types/lodash": "^4.14.168",
-    "@types/react-dom": "^17.0.1"
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2",
+    "webpack": "^5.24.2"
   }
 }
