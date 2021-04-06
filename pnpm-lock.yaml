@@ -31,7 +31,7 @@ importers:
       ts-node: ^9.1.1
       typescript: ^4.2.2
       webpack: ^5.24.2
-  packages/csrf:
+  packages/cors:
     dependencies:
       body-parser: 1.19.0
       express: 4.17.1
@@ -117,6 +117,15 @@ importers:
       memfs: ^3.2.0
       webpack: 5.9.0
       webpack-cli: ^4.3.1
+  packages/wechat:
+    dependencies:
+      express: 4.17.1
+      tnwx: 2.5.4
+      uuid: 8.3.2
+    specifiers:
+      express: ^4.17.1
+      tnwx: ^2.5.4
+      uuid: ^8.3.2
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.12.13:
@@ -1417,6 +1426,83 @@ packages:
     resolution:
       integrity: sha1-KTZ0/MsyYqx4LHqt/eyoaxDHXEA=
       tarball: '@sinonjs/fake-timers/download/@sinonjs/fake-timers-6.0.1.tgz'
+  /@tnwx/accesstoken/2.5.4:
+    dependencies:
+      '@tnwx/cache': 2.5.4
+      '@tnwx/kits': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-GXs63bZ0edsPtd4tNoxPzjqdRHw=
+      tarball: '@tnwx/accesstoken/download/@tnwx/accesstoken-2.5.4.tgz'
+  /@tnwx/cache/2.5.4:
+    dev: false
+    resolution:
+      integrity: sha1-5PNMgBx4auZc2u+pp2bD1BCnx24=
+      tarball: '@tnwx/cache/download/@tnwx/cache-2.5.4.tgz'
+  /@tnwx/commons/2.5.4:
+    dependencies:
+      '@tnwx/accesstoken': 2.5.4
+      '@tnwx/cache': 2.5.4
+      '@tnwx/kits': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-wL3ozegDTnlXaanFbu678+nRmjM=
+      tarball: '@tnwx/commons/download/@tnwx/commons-2.5.4.tgz'
+  /@tnwx/kits/2.5.4:
+    dependencies:
+      axios: 0.19.2
+      concat-stream: 2.0.0
+      request: 2.88.2
+      urlencode: 1.1.0
+      uuid: 3.4.0
+      xml2js: 0.4.23
+    dev: false
+    resolution:
+      integrity: sha1-Ipvz3mJ2Rmm2il9QG+LCGh5W9fQ=
+      tarball: '@tnwx/kits/download/@tnwx/kits-2.5.4.tgz'
+  /@tnwx/miniprogram/2.5.4:
+    dependencies:
+      '@tnwx/accesstoken': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-qlTQm0RQ97fOlfS5Fxw2Ok6PX5c=
+      tarball: '@tnwx/miniprogram/download/@tnwx/miniprogram-2.5.4.tgz'
+  /@tnwx/opencp/2.5.4:
+    dependencies:
+      '@tnwx/accesstoken': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-X0Hx8SmOjbNDFmawGDI2nx/Lx84=
+      tarball: '@tnwx/opencp/download/@tnwx/opencp-2.5.4.tgz'
+  /@tnwx/openmp/2.5.4:
+    dependencies:
+      '@tnwx/commons': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-TiJdoPVT5hhiaYjxRA/Roku92QE=
+      tarball: '@tnwx/openmp/download/@tnwx/openmp-2.5.4.tgz'
+  /@tnwx/wxcp/2.5.4:
+    dependencies:
+      '@tnwx/commons': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-K3aqU6PKErYjxwjHuaSjKoUmbQU=
+      tarball: '@tnwx/wxcp/download/@tnwx/wxcp-2.5.4.tgz'
+  /@tnwx/wxmp/2.5.4:
+    dependencies:
+      '@tnwx/commons': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-L0vV1lJ9mCyfDisVLqW8adqtqL8=
+      tarball: '@tnwx/wxmp/download/@tnwx/wxmp-2.5.4.tgz'
+  /@tnwx/wxpay/2.5.4:
+    dependencies:
+      '@tnwx/cache': 2.5.4
+      '@tnwx/kits': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-cLm4M5SF2K7bTJ0GT2IPCeIC6Fs=
+      tarball: '@tnwx/wxpay/download/@tnwx/wxpay-2.5.4.tgz'
   /@types/anymatch/1.3.1:
     dev: false
     resolution:
@@ -1573,7 +1659,7 @@ packages:
   /@types/node/14.14.31:
     resolution:
       integrity: sha1-cihr0z0TeqDRUtR+x8F2JWPTQFU=
-      tarball: '@types/node/download/@types/node-14.14.31.tgz'
+      tarball: '@types/node/download/@types/node-14.14.31.tgz?cache=0&sync_timestamp=1616816269591&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40types%2Fnode%2Fdownload%2F%40types%2Fnode-14.14.31.tgz'
   /@types/normalize-package-data/2.4.0:
     dev: false
     resolution:
@@ -2062,7 +2148,7 @@ packages:
       uri-js: 4.4.1
     resolution:
       integrity: sha1-uvWmLoArB9l3A0WG+MO69a3ybfQ=
-      tarball: ajv/download/ajv-6.12.6.tgz
+      tarball: ajv/download/ajv-6.12.6.tgz?cache=0&sync_timestamp=1617261249057&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fajv%2Fdownload%2Fajv-6.12.6.tgz
   /ansi-colors/3.2.4:
     dev: false
     engines:
@@ -2286,6 +2372,14 @@ packages:
     resolution:
       integrity: sha1-1h9G2DslGSUOJ4Ta9bCUeai0HFk=
       tarball: aws4/download/aws4-1.11.0.tgz
+  /axios/0.19.2:
+    dependencies:
+      follow-redirects: 1.5.10
+    deprecated: Critical security vulnerability fixed in v0.21.1. For more information, see https://github.com/axios/axios/pull/3410
+    dev: false
+    resolution:
+      integrity: sha1-PqNsXYgY0NX4qKl6bTa4bNwAyyc=
+      tarball: axios/download/axios-0.19.2.tgz?cache=0&sync_timestamp=1609319355933&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Faxios%2Fdownload%2Faxios-0.19.2.tgz
   /babel-jest/26.6.3_@babel+core@7.13.8:
     dependencies:
       '@babel/core': 7.13.8
@@ -3046,6 +3140,18 @@ packages:
     resolution:
       integrity: sha1-kEvfGUzTEi/Gdcd/xKw9T/D9GjQ=
       tarball: concat-stream/download/concat-stream-1.6.2.tgz
+  /concat-stream/2.0.0:
+    dependencies:
+      buffer-from: 1.1.1
+      inherits: 2.0.4
+      readable-stream: 3.6.0
+      typedarray: 0.0.6
+    dev: false
+    engines:
+      '0': node >= 6.0
+    resolution:
+      integrity: sha1-QUz1r3kKSMYKub5FJ9VtXkETPLE=
+      tarball: concat-stream/download/concat-stream-2.0.0.tgz
   /connect-history-api-fallback/1.6.0:
     dev: false
     engines:
@@ -3265,6 +3371,13 @@ packages:
     resolution:
       integrity: sha1-XRKFFd8TT/Mn6QpMk/Tgd6U2NB8=
       tarball: debug/download/debug-2.6.9.tgz?cache=0&sync_timestamp=1607570951816&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-2.6.9.tgz
+  /debug/3.1.0:
+    dependencies:
+      ms: 2.0.0
+    dev: false
+    resolution:
+      integrity: sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
+      tarball: debug/download/debug-3.1.0.tgz?cache=0&sync_timestamp=1607570951816&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-3.1.0.tgz
   /debug/3.2.7:
     dependencies:
       ms: 2.1.3
@@ -4187,6 +4300,15 @@ packages:
     resolution:
       integrity: sha1-5VmK1QF0wbxOhyMB6CrCzZf5Amc=
       tarball: follow-redirects/download/follow-redirects-1.13.3.tgz
+  /follow-redirects/1.5.10:
+    dependencies:
+      debug: 3.1.0
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha1-e3qfmuov3/NnhqlP9kPtB/T/Xio=
+      tarball: follow-redirects/download/follow-redirects-1.5.10.tgz
   /for-in/1.0.2:
     engines:
       node: '>=0.10.0'
@@ -7616,6 +7738,11 @@ packages:
     resolution:
       integrity: sha1-7Ygf2SJzOmxGG8GJ3CtsAG8//e0=
       tarball: sane/download/sane-4.1.0.tgz
+  /sax/1.2.4:
+    dev: false
+    resolution:
+      integrity: sha1-KBYjTiN4vdxOU1T6tcqold9xANk=
+      tarball: sax/download/sax-1.2.4.tgz
   /saxes/5.0.1:
     dependencies:
       xmlchars: 2.2.0
@@ -8399,6 +8526,22 @@ packages:
     resolution:
       integrity: sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
       tarball: tmpl/download/tmpl-1.0.4.tgz
+  /tnwx/2.5.4:
+    dependencies:
+      '@tnwx/accesstoken': 2.5.4
+      '@tnwx/cache': 2.5.4
+      '@tnwx/commons': 2.5.4
+      '@tnwx/kits': 2.5.4
+      '@tnwx/miniprogram': 2.5.4
+      '@tnwx/opencp': 2.5.4
+      '@tnwx/openmp': 2.5.4
+      '@tnwx/wxcp': 2.5.4
+      '@tnwx/wxmp': 2.5.4
+      '@tnwx/wxpay': 2.5.4
+    dev: false
+    resolution:
+      integrity: sha1-WUdF7dLjnJNK1Buzqye28XxM8Hk=
+      tarball: tnwx/download/tnwx-2.5.4.tgz
   /to-arraybuffer/1.0.1:
     resolution:
       integrity: sha1-fSKbH8xjfkZsoIEYCDanqr/4P0M=
@@ -8723,6 +8866,13 @@ packages:
     resolution:
       integrity: sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE=
       tarball: url/download/url-0.11.0.tgz
+  /urlencode/1.1.0:
+    dependencies:
+      iconv-lite: 0.4.24
+    dev: false
+    resolution:
+      integrity: sha1-HyuibwE8hfATP3o61v8nMK33y7c=
+      tarball: urlencode/download/urlencode-1.1.0.tgz
   /use/3.1.1:
     engines:
       node: '>=0.10.0'
@@ -8774,7 +8924,6 @@ packages:
   /uuid/8.3.2:
     dev: false
     hasBin: true
-    optional: true
     resolution:
       integrity: sha1-gNW1ztJxu5r2xEXyGhoExgbO++I=
       tarball: uuid/download/uuid-8.3.2.tgz
@@ -9394,6 +9543,23 @@ packages:
     resolution:
       integrity: sha1-auc+Bt5NjG5H+fsYH3jWSK1FfGo=
       tarball: xml-name-validator/download/xml-name-validator-3.0.0.tgz
+  /xml2js/0.4.23:
+    dependencies:
+      sax: 1.2.4
+      xmlbuilder: 11.0.1
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha1-oMaVFnUkIesqx1juTUzPWIQ+rGY=
+      tarball: xml2js/download/xml2js-0.4.23.tgz
+  /xmlbuilder/11.0.1:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha1-vpuuHIoEbnazESdyY0fQrXACvrM=
+      tarball: xmlbuilder/download/xmlbuilder-11.0.1.tgz
   /xmlchars/2.2.0:
     dev: false
     resolution:
