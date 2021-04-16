@@ -96,6 +96,13 @@ importers:
       webpack: ^4.43.0
       webpack-cli: 3.3.11
       webpack-dev-server: ^3.10.3
+  packages/staticServer:
+    dependencies:
+      content-disposition: 0.5.3
+      express: 4.17.1
+    specifiers:
+      content-disposition: ^0.5.3
+      express: ^4.17.1
   packages/webpack-test:
     dependencies:
       '@babel/core': 7.13.8
