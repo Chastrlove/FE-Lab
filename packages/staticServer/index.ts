@@ -9,17 +9,19 @@ app.use(
   express.static(path.resolve("./public"), {
     setHeaders(res, path) {
       res.setHeader("Cache-Control", "no-store");
-      res.setHeader(
-        "Content-Disposition",
-        contentDisposition(path, {
-          type: path.includes("png") ? "inline" : "attachment",
-        })
-      );
+      if (path.includes("png")) {
+        res.setHeader(
+          "Content-Disposition",
+          contentDisposition(path, {
+            type: "inline",
+          })
+        );
+      }
     },
   })
 );
 
-const server = app.listen(8001, "localhost", () => {
+const server = app.listen(8001, "0.0.0.0", () => {
   let addressInfo: AddressInfo = <AddressInfo>server.address();
   if (addressInfo) {
     let host = addressInfo.address;

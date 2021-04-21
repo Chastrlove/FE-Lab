@@ -1,0 +1,6 @@
+version: '3.9'
+services:
+  frontend:
+    image: chastlove/nextjs-docker-wd
+    ports:
+      - 4000:3000
