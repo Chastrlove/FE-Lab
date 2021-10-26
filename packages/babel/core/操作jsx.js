@@ -12,15 +12,25 @@ let ast = parser.parse(js_code, {
 const traverse = require("@babel/traverse").default;
 
 traverse(ast, {
-  JSXAttribute(path) {
-    const { name, value } = path.node;
-    if (name.name === "x-if") {
-      if (t.isJSXIdentifier(name) && t.isJSXExpressionContainer(value)) {
-        const idt = value.expression;
-        const node = t.jsxExpressionContainer(
-          t.logicalExpression("&&", idt, path.parentPath.parent)
-        );
-        path.replaceWith(node);
+  JSXElement(path) {
+    const { node, parentPath } = path;
+    const { openingElement } = node;
+    const { attributes } = openingElement;
+    for (let attrIndex in attributes) {
+      const attrNode = attributes[attrIndex];
+      const { name, value } = attrNode;
+      if (name.name === "x-if") {
+        attributes.splice(attrIndex, 1);
+        if (t.isJSXIdentifier(name) && t.isJSXExpressionContainer(value)) {
+          const idt = value.expression;
+          const callExp = t.logicalExpression("&&", idt, path.node);
+          if (t.isJSXElement(parentPath) || t.isJSXFragment(parentPath)) {
+            path.replaceWith(t.jsxExpressionContainer(callExp));
+          } else {
+            path.replaceWith(callExp);
+          }
+        }
+        break;
       }
     }
   },
