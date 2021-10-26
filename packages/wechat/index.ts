@@ -38,8 +38,8 @@ const server = app.listen(8100, "localhost", () => {
     let port = addressInfo.port;
     // 亦可以读取配置文件
     let devApiConfig = new ApiConfig(
-      "wx115479ab73f8066f",
-      "5e3d4db62c1bafafe6b21163e5a9efb3",
+      "wx743e9c2812fb3e2b",
+      "34fc1c1a831e61bb52af6406d163fe38",
       "token"
     );
     // let proApiConfig = new ApiConfig(
