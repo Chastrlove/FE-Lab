@@ -6,7 +6,8 @@ const app = express();
 
 app.use(express.static(path.resolve("./static")));
 
-app.post('/getName',(req,res)=>{
+app.get('/getName',(req,res)=>{
+  res.cookie('cookie','123',{domain:"localhost"})
   res.send('mama')
 })
 

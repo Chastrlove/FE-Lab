@@ -1,0 +1,20 @@
+<html>
+<head>
+    <script src="https://cdn.socket.io/4.1.2/socket.io.min.js" integrity="sha384-toS6mmwu70G0fw54EGlWWeA4z3dyJ+dlXBtSURSKN4vyRFOcxd3Bzjj/AoOwY+Rg" crossorigin="anonymous"></script>
+<!--    <script>-->
+<!--        const aa = new WebSocket('ws://localhost:4000')-->
+<!--        aa.onopen((self,ev)=>{-->
+<!--            console.log(ev)-->
+<!--        })-->
+<!--    </script>-->
+    <script>
+        const socket = io('ws://localhost:4000');
+        socket.on("connect", () => {
+            console.log(`connect ${socket.id}`);
+        });
+    </script>
+</head>
+ <body>
+
+ </body>
+</html>

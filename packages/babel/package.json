@@ -1,0 +1,15 @@
+{
+  "name": "babel-general",
+  "version": "1.0.0",
+  "dependencies": {
+    "yargs": "^17.0.1",
+    "@babel/core": "^7.14.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.1",
+    "@babel/parser": "^7.14.4",
+    "@babel/traverse": "^7.14.2",
+    "@babel/generator": "^7.14.3",
+    "@babel/types": "^7.14.4"
+  }
+}

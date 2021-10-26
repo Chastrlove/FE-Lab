@@ -1,3 +1,4 @@
+// @tslint disabled
 import * as express from "express";
 import * as fs from "fs";
 import * as path from "path";
@@ -30,15 +31,15 @@ app.get("/wxcheck", async (req, res) => {
   res.send(WeChat.checkSignature(signature, timestamp,nonce, echostr))
 });
 
-const server = app.listen(8001, "localhost", () => {
+const server = app.listen(8100, "localhost", () => {
   let addressInfo: AddressInfo = <AddressInfo>server.address();
   if (addressInfo) {
     let host = addressInfo.address;
     let port = addressInfo.port;
     // 亦可以读取配置文件
     let devApiConfig = new ApiConfig(
-      "wx743e9c2812fb3e2b",
-      "34fc1c1a831e61bb52af6406d163fe38",
+      "wx115479ab73f8066f",
+      "5e3d4db62c1bafafe6b21163e5a9efb3",
       "token"
     );
     // let proApiConfig = new ApiConfig(
