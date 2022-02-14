@@ -1,4 +1,4 @@
-const fs = require("fs");
+/*const fs = require("fs");
 const parser = require("@babel/parser");
 const { default: generator } = require("@babel/generator");
 const t = require("@babel/types");
@@ -37,4 +37,6 @@ traverse(ast, {
 });
 
 let code = generator(ast).code;
-console.log(code);
+console.log(code);*/
+
+

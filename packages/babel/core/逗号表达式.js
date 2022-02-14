@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const js_code = fs.readFileSync("../demos/还原逗号.js", {
+const js_code = fs.readFileSync("../demos/isg.tsx", {
     encoding: "utf-8"
 });
 
@@ -29,8 +29,7 @@ traverse(ast, {
             });
             // 用刚刚取出的最后一个表达式替换sequenceExpression
             path.replaceInline(finalExpression);
-            let code = generator(ast).code;
-            console.log(code);
+            // let code = generator(ast).code;
         }
     }
 });

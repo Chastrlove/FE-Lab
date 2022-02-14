@@ -1,0 +1,8 @@
+{
+  "name": "color",
+  "version": "1.0.0",
+  "dependencies": {
+    "esno": "^0.14.0",
+    "tinycolor2": "^1.4.2"
+  }
+}

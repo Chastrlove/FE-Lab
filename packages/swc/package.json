@@ -1,0 +1,20 @@
+{
+  "name": "swc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "cross-env NODE_ENV=production swc src -d dist -w --config-file .swcrc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "马晨杰",
+  "license": "ISC",
+  "dependencies": {
+    "esbuild": "^0.14.1",
+    "react-refresh": "^0.10.0",
+    "cross-env": "^7.0.3",
+    "chokidar": "^3.5.2",
+    "@swc/cli": "^0.1.52",
+    "@swc/core": "^1.2.118"
+  }
+}
