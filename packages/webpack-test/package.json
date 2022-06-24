@@ -9,6 +9,8 @@
     "testEnvironment": "node"
   },
   "dependencies": {
+    "webpack-node-externals": "3.0.0",
+    "js-cookie": "3.0.1",
     "jest": "^26.6.3",
     "webpack-cli": "^4.3.1",
     "babel-jest": "^26.6.3",
@@ -17,6 +19,9 @@
     "@babel/core": "^7.12.10",
     "loader-utils": "^2.0.0",
     "memfs": "^3.2.0",
-    "webpack": "5.9.0"
+    "webpack": "^5.57.0",
+    "enhanced-resolve": "^5.9.3",
+    "framer-motion": "^6.3.13",
+    "fs-extra": "^10.1.0"
   }
 }
