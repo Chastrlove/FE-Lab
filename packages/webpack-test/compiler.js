@@ -2,6 +2,7 @@ const nodeExternals = require('webpack-node-externals');
 
 import path from "path";
 import webpack from "webpack";
+const  EnvPathPlugin = require('./resolve/EnvPathPlugin');
 import {createFsFromVolume, Volume} from 'memfs';
 
 
@@ -10,22 +11,23 @@ export default (fixture) => {
     const basePath = path.dirname(fixture)
 
     const config = {
-        target: ["node12.22"],
+        target: ["web"],
         mode: "production",
         entry: fixture,
         output: {
             path: path.resolve(basePath),
             filename: "bundle_output.js",
-            library: undefined,
-            libraryTarget: 'commonjs2',
+            // library: undefined,
+            // libraryTarget: 'commonjs2',
         },
         externalsPresets: { node: true },
         externals: [nodeExternals({
             importType: "import"
         })],
         optimization: {
-            minimize: false
+            minimize: true
         },
+
         resolve: {
             modules: ["node_modules"],
             extensions: [
@@ -41,6 +43,12 @@ export default (fixture) => {
                 ".json",
                 ".d.ts",
             ],
+            // plugins:[new EnvPathPlugin({
+            //     paths: [
+            //         path.resolve(__dirname, 'test/fixtures/brand/js'),
+            //         path.resolve(__dirname, 'test/fixtures/core/js')
+            //     ]
+            // })]
         },
         module: {
             rules: [

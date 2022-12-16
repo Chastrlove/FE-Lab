@@ -1,7 +1,10 @@
-import jsCookie from 'js-cookie'
-jsCookie.set()
+import {a} from './aa'
 
-import {m} from 'framer-motion'
+const xx = (cv)=>{
+  document.createElement(cv)
+  return cv(a)
+}
 
-const a = m.div
+xx((params)=>{params.a=123})
 
+document.createElement(a)

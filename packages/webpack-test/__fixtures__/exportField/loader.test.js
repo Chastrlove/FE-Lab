@@ -13,6 +13,8 @@ test('Inserts name and outputs JavaScript', async () => {
 
 
     expect(Object.keys(output).some((key)=>{
+
+        console.log(output[key])
         return output[key].indexOf(`import("js-cookie")`) > -1
     })).toBe(true)
 
