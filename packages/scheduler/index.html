@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>schedule用法</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+  />
+  <script src="./schedule.js"></script>
+  <style>
+      #animation {
+          width: 30px;
+          height: 30px;
+          background: red;
+          animation: myfirst 5s infinite;
+      }
+      @keyframes myfirst {
+          from {
+              width: 30px;
+              height: 30px;
+              border-radius: 0;
+              background: red;
+          }
+          to {
+              width: 300px;
+              height: 300px;
+              border-radius: 50%;
+              background: yellow;
+          }
+      }
+  </style>
+</head>
+
+<body>
+<div id="animation">
+  <div>Scheduler</div>
+</div>
+<script>
+  function printA(didTimeout) {
+    console.log("A start");
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < 1) {}
+    console.log("A didTimeout：", didTimeout);
+  }
+  function printB(didTimeout) {
+    console.log("B start");
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < 3) {}
+    console.log("B didTimeout：", didTimeout);
+  }
+  function printC(didTimeout) {
+    console.log("C start");
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < 4) {}
+    console.log("C didTimeout：", didTimeout);
+  }
+  function printD(didTimeout) {
+    console.log("D start");
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < 7) {}
+    console.log("D didTimeout：", didTimeout);
+  }
+  function printE(didTimeout) {
+    console.log("E start");
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < 12) {}
+    console.log("E didTimeout：", didTimeout);
+  }
+  window.onload = ()=>{
+    unstable_scheduleCallback(NormalPriority, printA);
+    unstable_scheduleCallback(NormalPriority, printB);
+    unstable_scheduleCallback(NormalPriority, printC);
+    unstable_scheduleCallback(NormalPriority, printD);
+    unstable_scheduleCallback(NormalPriority, printE);
+  }
+
+</script>
+</body>
+</html>
