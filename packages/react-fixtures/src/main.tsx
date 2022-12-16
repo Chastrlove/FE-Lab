@@ -1,11 +1,10 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import { createRoot } from "react-dom/client";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+import React, { Suspense } from "react";
+import { ErrorBoundary } from "react-error-boundary";
+import App from "./App";
+import "./index.css"
+
+
+
+createRoot(document.getElementById("root")).render(<App />);
