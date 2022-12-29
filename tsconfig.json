@@ -4,7 +4,10 @@
   },
   "compilerOptions": {
     "module": "commonjs",
+    "target": "es6",
     "jsx": "react",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
     "allowSyntheticDefaultImports": true
   },
 }

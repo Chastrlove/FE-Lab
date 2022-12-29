@@ -1,0 +1,14 @@
+{
+  "printWidth": 100,
+  "arrowParens": "always",
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": "*.hbs",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}
