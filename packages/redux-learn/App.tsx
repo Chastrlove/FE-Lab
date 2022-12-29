@@ -6,9 +6,7 @@ const addCountAction = {
 };
 
 const mapStateToProps = (state) => {
-  return {
-    count: state.count,
-  };
+  return state.counter
 };
 
 const mapDispatchToProps = (dispatch) => {

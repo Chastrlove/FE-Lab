@@ -1,36 +1,49 @@
 //最简单的redux
 
-import { reducer } from "./reducer";
+import { countReducer } from "./reducer";
+import { applyMiddleware } from "./middleware";
 
-export const createStore=(reducer)=>{
-    const listeners= []
-    let currentState
-    const getState=()=>{
-        return currentState
-    }
+export const createStoreRaw = (reducer) => {
+  const listeners = [];
+  let currentState;
+  const getState = () => {
+    return currentState;
+  };
 
+  const dispatch = (action) => {
+    currentState = reducer(currentState, action);
+    for (let i = 0; i < listeners.length; i++) {
+      listeners[i]();
+    }
+  };
+  const subscribe = (listener) => {
+    listeners.push(listener);
+    return function unsubscribe() {
+      const index = listeners.indexOf(listener);
+      listeners.splice(index, 1);
+    };
+  };
+  dispatch({
+    type: "@INIT",
+  });
 
-    const dispatch=(action)=>{
-       currentState=reducer(currentState,action);
-        for(let i =0 ;i<listeners.length;i++){
-            listeners[i]()
-        }
-    }
-    const subscribe=(listener)=>{
-        listeners.push(listener)
-        return function unsubscribe(){
-            const index =listeners.indexOf(listener)
-            listeners.splice(index,1)
-        }
-    }
-    dispatch({
-        type:"@INIT"
-    })
+  return {
+    getState,
+    dispatch,
+    subscribe,
+  };
+};
 
-    return {
-        getState,dispatch,subscribe
-    }
-}
+const logMiddleware = (store) => (next) => (action) => {
+  console.log("log1",store);
+  next(action);
+};
+
+const log2Middleware = (store) => (next) => (action) => {
+  console.log("log2",store);
+  next(action);
+};
+export const createStore = applyMiddleware(log2Middleware, logMiddleware)(createStoreRaw);
 
 // const store = createStore(reducer)
 //
@@ -41,5 +54,3 @@ export const createStore=(reducer)=>{
 //     }
 // })
 // console.log(store.getState())
-
-
