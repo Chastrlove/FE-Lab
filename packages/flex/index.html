@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style>
+      /**
+        剩余空间 = 300 - 20%* 300 -20*2 - 10%* 300 - 10*2 = 150
+        有多余就根据flex-grow分配，此时都为1，因此均分为75
+        所以left：60 + 40 + 75
+        所以right：30 + 20 + 75
+       */
+      .box {
+        display: flex;
+        width: 300px;
+        height: 400px;
+      }
+      .left {
+        flex: 1 1 20%;
+        padding: 20px;
+        background: red;
+      }
+      .right {
+        flex: 1 1 10%;
+        padding: 10px;
+        background: yellow;
+      }
+
+      /**
+      剩余空间 = 300 - 120%* 300 -20*2 - 10%* 300 - 10*2 = -150
+      没有剩余就根据flex-shrink+宽度分配，此时为1*120%*300 1*10%*300，因此均分为150切分12:1
+      所以left：360 + 40  - 12/13 * 150
+      所以right：30 + 20  - 1/13 * 150
+     */
+      .box1 {
+        display: flex;
+        width: 300px;
+        height: 400px;
+      }
+      .left1 {
+        flex: 1 1 120%;
+        padding: 20px;
+        background: red;
+      }
+      .right1 {
+        flex: 1 1 10%;
+        padding: 10px;
+        background: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="left"></div>
+      <div class="right"></div>
+    </div>
+    <div class="box1">
+      <div class="left1"></div>
+      <div class="right1"></div>
+    </div>
+  </body>
+</html>
