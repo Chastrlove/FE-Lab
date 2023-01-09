@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <div style="background:red" id="aa">1222</div>
+  <script>
+   document.getElementById("aa").addEventListener("click",(event)=>{
+     event.target.style.background="yellow";
+     const a = document.documentElement.clientHeight;//说明此处会调用重新计算style.但是并不意味着渲染到屏幕上
+     console.log(a);
+     const startTime = performance.now();
+     let now=startTime;
+     while (now - startTime <1000){
+       now = performance.now();
+
+     }
+
+   })
+  </script>
+</body>
+</html>

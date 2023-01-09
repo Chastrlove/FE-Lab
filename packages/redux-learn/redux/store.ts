@@ -42,6 +42,7 @@ const logMiddleware = (store) => (next) => (action) => {
 const log2Middleware = (store) => (next) => (action) => {
   console.log("log2",store);
   next(action);
+  console.log("log2111");
 };
 export const createStore = applyMiddleware(log2Middleware, logMiddleware)(createStoreRaw);
 
