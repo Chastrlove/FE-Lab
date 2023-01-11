@@ -1,4 +1,3 @@
-/*
 class MyPromise {
     private static PENDING = 'pending';
     private static RESOLVED = 'resolved';
@@ -81,7 +80,6 @@ a.then((value) => {
 }, (err) => {
     console.log(err)
 })
-*/
 
 
 const a = /(?<=（)[^（）]+(?=）)/.exec('(特别授权)姜志国（特别授权)');
