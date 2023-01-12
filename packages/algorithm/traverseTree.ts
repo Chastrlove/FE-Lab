@@ -62,6 +62,10 @@ const inOrder = (root) => {
 // console.log("中序");
 // inOrder(root);
 
+/**
+ * Given a binary tree, return the post-order traversal of its nodes' values
+ * @param root - The root node of the binary tree.
+ */
 const postOrder = (root) => {
   const stack = [];
   const result = [];
