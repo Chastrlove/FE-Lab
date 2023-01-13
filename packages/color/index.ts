@@ -1,4 +1,4 @@
-import * as tinycolor from "tinyColor2";
+import  tinycolor from "tinyColor2";
 
 export function colorPalette() {
   var hueStep = 2;
@@ -68,4 +68,4 @@ export function colorPalette() {
   };
 }
 
-console.log(new colorPalette().colorPalette('#0882f1', 5))
+console.log(new colorPalette().colorPalette('#02A0FC', 5))
