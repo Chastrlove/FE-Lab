@@ -1,4 +1,4 @@
-import { createLinkedHead, ListNode } from "./base";
+import { createLinkedHead, ListNode } from "../base";
 
 export const mergeLink = (list1, list2) => {
   let head = new ListNode(-1);
