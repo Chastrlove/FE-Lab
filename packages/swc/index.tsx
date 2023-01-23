@@ -1,25 +1,33 @@
-var webpackJsonpCallback = function (parentChunkLoadingFunction, data) {
-  var chunkIds = data[0];
-  var moreModules = data[1];
-  var runtime = data[2];
-  var moduleId, chunkId, i = 0;
-  if (chunkIds.some(function (id) {
-    return installedChunks[id] !== 0;
-  })) {
-    for (moduleId in moreModules) {
-      if (__webpack_require__.o(moreModules, moduleId)) {
-        __webpack_require__.m[moduleId] = moreModules[moduleId];
-      }
-    }
-    if (runtime) var result = runtime(__webpack_require__);
-  }
-  if (parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-  for (; i < chunkIds.length; i++) {
-    chunkId = chunkIds[i];
-    if (__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-      installedChunks[chunkId][0]();
-    }
-    installedChunks[chunkIds[i]] = 0;
-  }
+import LoginForm from "./PageForm";
+import { css } from "@emotion/react";
 
-}
+const leftCss = css`
+  height: 100%;
+  display: flex;
+`;
+
+const formWrapCss = css`
+  flex: 1;
+  display: flex;
+  align-items: center;
+`;
+
+const Login = () => {
+    return (
+        <div css={leftCss}>
+            <div
+                css={(theme) => css`
+          flex: 0 1 480px;
+          background: ${theme.colors.primary};
+        `}
+            >
+                left
+            </div>
+            <div css={formWrapCss}>
+                <LoginForm />
+            </div>
+        </div>
+    );
+};
+
+export default Login;

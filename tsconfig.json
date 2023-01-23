@@ -1,9 +1,12 @@
 {
   "ts-node": {
-    "transpileOnly": true
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "commonjs"
+    },
   },
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "esnext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
@@ -12,7 +15,7 @@
     "noImplicitAny": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "esnext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,

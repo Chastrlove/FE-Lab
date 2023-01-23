@@ -6,7 +6,7 @@ const { readdirSync, writeFileSync, existsSync, statSync, mkdirSync: fsMkdirSync
 const appDirectory = realpathSync(process.cwd());
 
 // const argv = require("yargs").argv
-const argv = {path:'./original'};
+const argv = {path:'./fixture'};
 
 const { path: fileDir } = argv;
 
@@ -46,6 +46,9 @@ const babelFile = (file, inputDir, outputDir) => {
     babel
         .transformFileAsync(file, {
             babelrc: true,
+            parserOpts:{
+                plugins:['jsx',"typescript"]
+            }
         })
         .then((res) => {
             mkdirSync(dirName(outFilePath));

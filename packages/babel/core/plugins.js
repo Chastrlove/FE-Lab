@@ -223,7 +223,6 @@ exports.resolveSequence = resolveSequence;
 exports.isElementsLiteral = isElementsLiteral;
 exports.deleteRepeatDefine = deleteRepeatDefine;
 exports.isBaseLiteral = isBaseLiteral;
-*/
 
 const {
   list,                  // array of required modules

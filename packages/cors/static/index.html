@@ -3,35 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <title>首页</title>
-    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.1/dayjs.min.js"></script>
   </head>
   <script>
-    const request = () => {
-     /* axios({
-        method: "post",
-        url:"http://localhost:8002/getOtherSiteName",
-        /!*body: {
-          name: "123",
-        },*!/
-        credentials:"include"
-      });*/
-      const result = fetch("http://localhost:8002/getOtherSiteName",{
-        method: "post",
-        headers:{
-          "Content-Type":"text/html",
-        },
-        body: JSON.stringify({
-          name: "123",
-        }),
-        // credentials:"include"
-      });
-      result.then(async(res)=>{
-        const aa = await res.text();
-        console.log(aa)
-      })
-    };
+    const a= dayjs('2019-07-30T16:00:00.000+0000');
+    console.log(a)
   </script>
   <body>
-    <button onclick="request()">请求</button>
+
   </body>
 </html>

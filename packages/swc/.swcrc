@@ -1,27 +1,29 @@
 {
-  "env": {
-    "coreJs": 3,
-    "targets": {
-     "esmodules": true
-    }
-  },
   "jsc": {
+    "externalHelpers": false,
     "parser": {
       "syntax": "typescript",
-      "dynamicImport": true,
-      "tsx": true,
-      "decorators": true
+      "tsx": true
     },
-    "target": "es2015",
+    "target": "es5",
+    "loose": false,
+    "minify": {
+      "compress": false,
+      "mangle": false
+    },
     "transform": {
-      "legacyDecorator": true,
-      "decoratorMetadata": true,
-      "react":{
-        "runtime":"automatic",
-        "throwIfNamespace":true,
-        "useBuiltins":true,
-        "refresh": true
+      "react": {
+        "runtime": "automatic",
+        "importSource":"@emotion/react"
       }
+    },
+    "experimental": {
+      "plugins": [["@swc/plugin-emotion",{"sourceMap":false}]]
     }
-  }
+  },
+  "module": {
+    "type": "commonjs"
+  },
+  "minify": false,
+  "isModule": true
 }

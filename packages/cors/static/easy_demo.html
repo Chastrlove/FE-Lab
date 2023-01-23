@@ -1,0 +1,32 @@
+<div id="root"></div>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "react": "https://ga.jspm.io/npm:react@17.0.2/dev.index.js",
+      "react-dom": "https://ga.jspm.io/npm:react-dom@17.0.2/dev.index.js",
+      "dayjs": "https://ga.jspm.io/npm:dayjs@1.11.1/dayjs.min.js"
+    },
+    "scopes": {
+      "https://ga.jspm.io/": {
+        "object-assign": "https://ga.jspm.io/npm:object-assign@4.1.1/index.js",
+        "scheduler": "https://ga.jspm.io/npm:scheduler@0.20.2/dev.index.js",
+        "scheduler/tracing": "https://ga.jspm.io/npm:scheduler@0.20.2/dev.tracing.js"
+      }
+    }
+  }
+</script>
+<script type="text/jsx" data-type="module">
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import dayjs from 'dayjs';
+  function App() {
+      const [aa] = React.useState(dayjs('2019-07-30T16:00:00.000+0000'));
+    return (
+      <div>
+        <h1>{aa.valueOf()}</h1>
+      </div>
+    );
+  }
+  ReactDOM.render(<App />, document.getElementById('root'));
+</script>
