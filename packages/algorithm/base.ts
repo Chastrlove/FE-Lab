@@ -63,5 +63,10 @@ export function levelOrderCreateTree(arr) {
   return root;
 }
 
+export const swap = (array, i, j) => {
+  const temp = array[j];
+  array[j] = array[i];
+  array[i] = temp;
+};
 
 // console.log(levelOrderCreateTree([3,5,1,6,2,0,8,null,null,7,4]))
