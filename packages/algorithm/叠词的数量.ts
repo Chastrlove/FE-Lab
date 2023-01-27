@@ -8,3 +8,6 @@ const d = inputValue.replace(/(\w)\1+/g,(match,$1,index)=>{
 
 console.log(count)
 console.log(d)
+
+
+

@@ -38,12 +38,15 @@ const bfsDepth = (root,searchDepth) => {
   return res
 };
 
+/*2 3
+3 4 5
+4 5 6 7*/
 const bfs = (root) => {
   const stack = [root];
   while (stack.length > 0) {
-    console.log(stack.length);
-    const node = stack.shift();
 
+    const node = stack.shift();
+    console.log(node.value);
     if (node.left) {
       stack.push(node.left);
     }
@@ -53,5 +56,5 @@ const bfs = (root) => {
   }
 };
 
-const a = bfsDepth(root,1);
+const a = bfsDepth(root,10);
 console.log(a)
