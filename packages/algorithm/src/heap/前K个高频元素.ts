@@ -94,6 +94,6 @@ let bucketSort = (map, k) => {
   return res;
 };
 
-const a = topKFrequentNew([1, 1, 1, 1, 2, 2, 3], 2);
+const a = topKFrequentNew([10, 1, 1, 1, 2, 2, 3], 2);
 
 console.log(a);

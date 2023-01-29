@@ -8,7 +8,6 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@vue/reactivity": "^3.0.7",
     "file-type": "^17.0.0",
     "geoip-lite": "^1.4.4",
     "global": "^4.4.0",
@@ -18,8 +17,6 @@
     "node-ip2region": "^1.0.2",
     "path-to-regexp": "^6.2.0",
     "prettier": "^2.7.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "tsx": "^3.8.0",
     "content-disposition": "*"
   },

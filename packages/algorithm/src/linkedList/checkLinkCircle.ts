@@ -1,4 +1,4 @@
-import { ListNode } from "./base";
+import { ListNode } from "../base";
 
 const circle = new ListNode(4);
 circle.next = new ListNode(5);

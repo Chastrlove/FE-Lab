@@ -1,0 +1,40 @@
+{
+  "name": "@algorithm/learn",
+  "version": "1.0.0",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./*": {
+      "import": [
+        "./dist/*.js",
+        "./dist/*/index.js"
+      ],
+      "require": [
+        "./dist/*.cjs",
+        "./dist/*/index.cjs"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*",
+        "src/*/index"
+      ]
+    }
+  },
+  "scripts": {
+    "dev": "pnpm build:swc -w",
+    "build": "rm -rf dist && pnpm build:swc && pnpm types",
+    "build:swc": "swc src -d dist",
+    "types": "tsc --emitDeclarationOnly"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.57"
+  }
+}
