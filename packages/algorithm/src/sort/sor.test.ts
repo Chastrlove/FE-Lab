@@ -7,6 +7,7 @@ import { insertSort } from "./insertSort";
 import { countSort } from "./count";
 import { shellSort } from "./shellSort";
 import { bucketSort } from "./bucketSort";
+import { radixSort } from "./radixSort";
 
 const input = [18, 21, 3, 5, 4, 7, 9, 12, 6];
 
@@ -36,5 +37,8 @@ describe("sort", () => {
   });
   it("bucketSort", () => {
     expect(bucketSort(input)).toEqual(output);
+  });
+  it("radixSort", () => {
+    expect(radixSort(input)).toEqual(output);
   });
 });
