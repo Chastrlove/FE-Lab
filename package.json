@@ -8,6 +8,8 @@
     "test": "vitest"
   },
   "dependencies": {
+    "bun": "^0.5.1",
+    "content-disposition": "*",
     "file-type": "^17.0.0",
     "geoip-lite": "^1.4.4",
     "global": "^4.4.0",
@@ -17,10 +19,10 @@
     "node-ip2region": "^1.0.2",
     "path-to-regexp": "^6.2.0",
     "prettier": "^2.7.0",
-    "tsx": "^3.8.0",
-    "content-disposition": "*"
+    "tsx": "^3.8.0"
   },
   "devDependencies": {
+    "tailwindcss": "^3.2.4",
     "@types/lodash": "^4.14.168",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
