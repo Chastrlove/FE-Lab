@@ -7,6 +7,8 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "use-tus": "^0.7.1",
+    "tus-js-client": "^3.0.1",
     "@dnd-kit/accessibility": "^3.0.0",
     "@dnd-kit/core": "^4.0.0",
     "@dnd-kit/modifiers": "^4.0.0",

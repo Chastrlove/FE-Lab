@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import ReactDom from "react-dom";
 
 import React, { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
@@ -7,4 +8,4 @@ import "./index.css"
 
 
 
-createRoot(document.getElementById("root")).render(<App />);
+ReactDom.render(<App />,document.getElementById("root"));
