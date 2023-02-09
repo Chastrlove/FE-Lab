@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "spark-md5": "^3.0.2",
+    "hash-wasm": "^4.9.0"
+  }
+}
